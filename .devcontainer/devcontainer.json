@@ -1,0 +1,44 @@
+// For format details, see https://aka.ms/devcontainer.json.
+// Imagen oficial de Google Colab para entornos de ejecución locales.
+// Documentación: https://research.google.com/colaboratory/local-runtimes.html
+{
+	"name": "Google Colab",
+	"image": "us-docker.pkg.dev/colab-images/public/cpu-runtime",
+	// Forward del puerto 8080 (Jupyter dentro del contenedor) al host.
+	// Conéctate desde Colab con la URL que aparece en los logs: http://127.0.0.1:8080/?token=...
+	"forwardPorts": [
+		8080
+	],
+	// El contenedor de Colab ya arranca Jupyter en el puerto 8080.
+	// No necesitamos override del comando; la imagen ya tiene el entrypoint correcto.
+	// Características adicionales para desarrollo.
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"installZsh": true,
+			"installOhMyZsh": true,
+			"upgradePackages": true,
+			"username": "vscode",
+			"uid": "automatic",
+			"gid": "automatic"
+		},
+		"ghcr.io/devcontainers/features/git:1": {}
+	},
+	// Configuración específica de VS Code.
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-toolsai.jupyter",
+				"ms-python.pylint",
+				"ms-python.isort",
+				"ms-python.mypy-type-checker",
+				"ms-python.black-formatter"
+			],
+			"settings": {
+				"python.defaultInterpreterPath": "/usr/local/bin/python"
+			}
+		}
+	},
+	// El contenedor Colab usa root por defecto.
+	"remoteUser": "vscode"
+}
