@@ -13,6 +13,7 @@
 |---|---|---|
 | [**Jerigonza**](cuadernos/Jerigonza.ipynb) | Cadenas de Markov | Generación de texto en español usando programación funcional pura. Entrenado sobre *Don Quijote*, produce jerigonza que casi parece castellano. |
 | [**Pruebas unitarias**](cuadernos/Pruebas%20unitarias.ipynb) | Testing en Python | Tutorial progresivo de `unittest`, `doctest` y TDD, ilustrado con una caja registradora (Kata09). |
+| [**ENOE 2026 T1**](cuadernos/enoe2026-t1.ipynb) | Análisis de datos | Descarga, modelado relacional (SQLite3) y análisis exploratorio de la Encuesta Nacional de Ocupación y Empleo. Infiere el esquema desde los diccionarios de datos oficiales del INEGI, construye una base de datos normalizada con ~100 catálogos, y explora el mercado laboral mexicano con gráficas estilo Tufte: pirámide poblacional, brecha salarial de género, formalidad por sector, subocupación por entidad y más. |
 
 ## 🚀 Para empezar
 
@@ -33,7 +34,7 @@ pip install numpy matplotlib networkx
 
 ## 🛠️ Tecnologías
 
-Python 3.10+ · Jupyter · NumPy · Matplotlib · NetworkX · mypy
+Python 3.10+ · Jupyter · NumPy · Matplotlib · pandas · seaborn · SQLite3 · NetworkX · mypy
 
 ## 📄 Licencia
 
