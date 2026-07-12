@@ -1,4 +1,5 @@
 {
+    "editor.formatOnSave": true,
     "mypy-type-checker.args": [
         "--strict"
     ]
